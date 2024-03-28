@@ -13,9 +13,44 @@
 
 <body>
     <main>
+        <section class="form">
+            <figure class="container" aria-hidden="true">
+                <picture>
+                    <source srcset="imgs/10769816_4530765.avif" type="image/avif">
+                    <source srcset="imgs/10769816_4530765.webp" type="image/avif">
+                    <img 
+                        src="./imgs/10769816_4530765.jpg" 
+                        alt=" fingerprint concept illustration" 
+                        width="1000"
+                        height="1000"
+                    >
+                </picture>
 
+                <form action="" method="post">
+                    <fieldset>
+                        <legend>This is not a real online service! You know you need something like
+                            this in your life to help you realize your deepest dreams. Sign up now to get started.
+                        </legend>
+                        <p>You know you want to</p>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Let's do this</legend>
+                        <label for="firstName">FIRST NAME <input type="text" id="firstName" name="first_name" aria-label="first name" autocomplete="cc-given-name" required="first name"></label>
+                        <label for="lastName">LAST NAME <input type="text" id="lastName" name="last_name" autocomplete="cc-family-name" required="last name"></label>
+                        <label for="email">EMAIL <input type="email" name="user_email" id="email" autocomplete="email" required="email"></label>
+                        <label for="phone">PHONE NUMBER <input type="tel" name="phone_number" id="phone" autocomplete="tel"></label>
+                        <label for="password">PASSWORD <input type="password" name="password" id="password" required></label>
+                        <label for="confirm">CONFIRM PASSWORD <input type="password" name="confirm_password" id="confirm" required></label>
+                    </fieldset>
+        
+                    <input type="submit" value="create account">
+                    <p>Already have an account?<a href="#">Log in</a></p>
+                </form>
+            </figure>
+
+        </section>
     </main>
-
 </body>
 
 </html>
