@@ -134,11 +134,6 @@ input[type="submit"]:hover {
     color: var(--primary-color);
 }
 
-#message {
-    color: red;
-    display: none;
-}
-
 @media screen and (max-width: 768px) {
     section[class="form"] .container {
         grid-template-columns: minmax(min-content, 1fr);
