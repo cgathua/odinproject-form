@@ -143,4 +143,8 @@ input[type="submit"]:hover {
         grid-template-columns: minmax(min-content, 1fr);
     }
 
+    .container {
+        width: var(--mobile-container);
+    }
+
 }

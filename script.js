@@ -10,11 +10,13 @@ confirmPassword.addEventListener("keyup", validatePassword);
 function validatePassword() {
     if (password.value !== confirmPassword.value) {
         displayOutput.style.color = 'red';
-        displayOutput.textContent = '*passwords do not match'
+        password.style.cssText = 'border: 2px solid red; border-radius: 3px';
+        displayOutput.textContent = '*confirm password does not match password'
         submitBtn.disabled = true;
         submitBtn.style.opacity = (0.4);
     } else {
         displayOutput.style.color = 'green';
+        password.style.cssText = 'border: 2px solid green; border-radius: 3px';
         displayOutput.textContent = '*password matches';
         submitBtn.disabled = false;
         submitBtn.style.opacity = (1);
