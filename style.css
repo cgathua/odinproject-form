@@ -1,0 +1,151 @@
+:root {
+    --primary-color: #334F57;
+    --secondary-color: #EDEBEB;
+    --desktop-container: 86%;
+    --mobile-container: 90%;
+    --transition: all 0.3s linear;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
+    font-weight: normal;
+    min-height: 100vh;
+    line-height: 1.75;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+html,
+body {
+    width: auto !important;
+    overflow-x: hidden !important;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: underline;
+    transition: var(--transition);
+}
+
+
+legend,
+strong,
+label,
+p {
+    color: var(--primary-color);
+}
+
+.container {
+    margin: 0 auto;
+    width: var(--desktop-container);
+}
+
+
+section[class="form"] .container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(min-content, 1fr));
+    align-items: center;
+    gap: 2rem;
+}
+
+
+label {
+    display: block;
+}
+
+fieldset {
+    border: none;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+section {
+    padding-top: 2rem;
+}
+
+form {
+    margin: 0rem auto;
+    max-width: 500px;
+    min-width: 300px;
+    width: 60vw;
+    padding-bottom: 2em;
+}
+
+.container fieldset:nth-child(2) {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(min-content, 1fr));
+    gap: 1rem;
+}
+
+input {
+    width: 100%;
+    margin: 10px 0 0 0;
+    min-height: 2em;
+    background-color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+    color: var(--primary-color);
+}
+
+
+input:focus-visible {
+    outline: 2px solid var(--primary-color);
+    border-radius: 3px;
+}
+
+input[type="submit"] {
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+    height: 2em;
+    font-size: 1.1rem;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border-color: var(--primary-color);
+    margin-top: 1em;
+    margin-bottom: 1em;
+    min-width: 300px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+input[type="submit"]:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+#message {
+    color: red;
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    section[class="form"] .container {
+        grid-template-columns: minmax(min-content, 1fr);
+    }
+
+    .container fieldset:nth-child(2) {
+        grid-template-columns: minmax(min-content, 1fr);
+    }
+
+}
